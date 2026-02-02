@@ -1,0 +1,26 @@
+- src/components/Footer.astro:
+  - description: "Footer partial exists"
+    check: ConfirmFileExists
+- src/components/Nav.astro:
+  - description: "Nav partial exists"
+    check: ConfirmFileExists
+- src/components/Header.astro:
+  - description: "Header partial exists"
+    check: ConfirmFileExists
+- src/layouts/BaseLayout.astro:
+  - description: "Base layout exists"
+    check: ConfirmFileExists
+- src/pages/index.astro:
+  - description: "Index page calls base layout in preamble"
+    check: MatchFileFragment
+    options:
+      fragment: 'import BaseLayout from "../Layouts/BaseLayout.astro"'
+      count: 1
+      exact: true
+- src/pages/index.astro:
+  - description: "Index sets a constant called pageTitle containing the page title"
+    check: MatchFileRegex
+    options:
+      regex: 'const(\s)pageTitle(\s)?=(\s)?[a-zA-Z0-9\s"]+'
+      count: 1
+      exact: true
