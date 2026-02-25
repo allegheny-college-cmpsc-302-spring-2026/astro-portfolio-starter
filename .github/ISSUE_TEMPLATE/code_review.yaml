@@ -33,6 +33,25 @@ body:
       value: |
         #### Design Principles
         Use markdown heading 5 and 6 to describe how the designer used each principle checked above.
+  - type: checkboxes
+    attributes:
+      label: Which design principles should the designer revisit?
+      description: You may select more than one.
+      options:
+        - label: Aligment
+        - label: Balance
+        - label: Symmetry
+        - label: Visual Hierarchy
+        - label: Negative Space
+        - label: Color
+        - label: Type
+  - type: textarea
+    attributes:
+      label: Examples of areas where the site designer should revise their use of a pirnciple
+      description: In the text area above, provide explanations/examples of improvements the designer could make.
+      value: |
+        #### Design Principles
+        Use markdown heading 5 and 6 to describe how the designer used each principle checked above.
   - type: markdown
     attributes:
       value: |
