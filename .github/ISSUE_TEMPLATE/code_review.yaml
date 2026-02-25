@@ -38,7 +38,14 @@ body:
         - "No"
     validations:
       required: true 
-
+  - type: dropdown
+    attributes:
+      label: Site being reviewed implements styles in the `public/style/style.css` file.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true 
   - type: markdown
     attributes:
       value: |
