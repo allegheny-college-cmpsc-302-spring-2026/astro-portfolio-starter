@@ -13,6 +13,35 @@ body:
   - type: markdown
     attributes:
       value: |
+        ### Assignment standards
+  - type: dropdown
+    attributes:
+      label: This site has at least one page which is reviewable and publically availble at the reviewee's *.github.io URL.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true  
+  - type: dropdown
+    attributes:
+      label: Reviewee's site implements at least `3` Astro components.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true 
+  - type: dropdown
+    attributes:
+      label: Reviewee's site effectively implements a `BaseLayout` (or other similar construct) for controlling site-wide layout.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true 
+
+  - type: markdown
+    attributes:
+      value: |
         ### HTML Standards
   - type: dropdown
     attributes:
