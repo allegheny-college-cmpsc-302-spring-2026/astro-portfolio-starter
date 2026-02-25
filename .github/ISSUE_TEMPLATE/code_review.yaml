@@ -22,7 +22,7 @@ body:
         - label: Aligment
         - label: Balance
         - label: Symmetry
-      validations
+      validations:
         required: true
   - type: markdown
     attributes:
