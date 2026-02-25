@@ -102,7 +102,7 @@ body:
       required: true
   - type: input
     attributes:
-      label: List the `ID`s the site's author uses more than once.
+      label: Which IDs are used more than once?
       placeholder: #example1, #example2
     validations:
       required: false
