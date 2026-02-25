@@ -181,3 +181,21 @@ body:
         ```HTML
           <!-- Use code blocks to include examples -->
         ```
+  - type: markdown
+    attributes:
+      value: |
+        ### CSS Standards
+  - type: dropdown
+    attributes:
+      label: The names of the various CSS rules implemented make sense in the context of their use.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Which rules use confusing, non-descriptive, or ambiguous names?
+      placeholder: #example1, .example2
+    validations:
+      required: false
