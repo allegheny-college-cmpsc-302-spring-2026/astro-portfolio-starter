@@ -1,0 +1,24 @@
+name: Code Review
+description: Provide peer review feedback based on established HTML and CSS standards.
+title: "CMPSC 302: Code Review"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Code Review
+  - type: markdown
+    attributes:
+      value: |
+        Respond to the following areas of concerns for a basic HTML/CSS code review.
+  - type: markdown
+    attributes:
+      value: |
+        ### HTML Standards
+  - type: dropdown
+    attributes:
+      label: The document's `BaseLayout` contains a `DOCTYPE` tag
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
