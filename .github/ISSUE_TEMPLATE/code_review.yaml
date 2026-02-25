@@ -94,7 +94,7 @@ body:
       required: false
   - type: dropdown
     attributes:
-      label: Does the markup of the site use `ID`s more than once?
+      label: Does the markup of the site use any single ID more than once?
       options:
         - "Yes"
         - "No"
@@ -106,3 +106,19 @@ body:
       placeholder: #example1, #example2
     validations:
       required: false
+  - type: dropdown
+    attributes:
+      label: Does the markup contain superfluous, un-necessary <div> elements?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Examples of superfluous <div> tags.
+      description: In the text area above, provide references to the site's files that create unnecessary, superfluous <div>s.
+      value: |
+        ```HTML
+          <!-- Use code blocks to include examples -->
+        ```
