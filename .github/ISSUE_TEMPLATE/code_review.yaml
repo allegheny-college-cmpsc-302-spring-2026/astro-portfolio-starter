@@ -87,6 +87,8 @@ body:
       label: Examples of improper use of non-semantic elements.
       description: In the text area below, provide references to the site's files that violate the "semantic element first" policy.
       value: |
-        Include HTML code fences to cite examples.
+        ```HTML
+          <!-- Use code blocks to include examples -->
+        ```
     validations:
       required: false
