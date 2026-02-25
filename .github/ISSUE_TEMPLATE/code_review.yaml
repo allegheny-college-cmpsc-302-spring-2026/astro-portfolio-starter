@@ -247,3 +247,23 @@ body:
         ```CSS
           /* Use code blocks to include examples */
         ```
+  - type: markdown
+    attributes:
+      value: |
+        ### General commentary
+  - type: textarea
+    attributes:
+      label: Provide areas where the designer's work demonstrates a grasp of course principles.
+      description: Provide items and summary above.
+      value: |
+        1.
+        2.
+        3.
+  - type: textarea
+    attributes:
+      label: Provide areas where the designer's work could use revision.
+      description: Provide items and summary above.
+      value: |
+        1.
+        2.
+        3.
