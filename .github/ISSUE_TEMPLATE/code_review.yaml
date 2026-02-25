@@ -199,3 +199,27 @@ body:
       placeholder: #example1, .example2
     validations:
       required: false
+  - type: dropdown
+    attributes:
+      label: Where possible, the designer uses CSS variables to unify colors, types, or other CSS properties.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Are padding, margin, and border used correctly?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Examples of elements misusing the above properties.
+      description: In the text area above, provide references to the rules that misuse these CSS properties.
+      value: |
+        ```CSS
+          <!-- Use code blocks to include examples -->
+        ```
