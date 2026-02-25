@@ -122,3 +122,20 @@ body:
         ```HTML
           <!-- Use code blocks to include examples -->
         ```
+  - type: dropdown
+    attributes:
+      label: If needing ARIA attributes, does the site use them in the correct places?
+      options:
+        - "Yes"
+        - "No"
+        - "Does not apply"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Examples of elements requiring ARIA attributes.
+      description: In the text area above, provide references to the sites files which demonstrate need for missing ARIA tags.
+      value: |
+        ```HTML
+          <!-- Use code blocks to include examples -->
+        ```
