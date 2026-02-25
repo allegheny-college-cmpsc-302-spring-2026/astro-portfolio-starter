@@ -90,3 +90,5 @@ body:
       ```html
       <!-- Include code blocks where possible -->
       ```
+    validations:
+      required: false
