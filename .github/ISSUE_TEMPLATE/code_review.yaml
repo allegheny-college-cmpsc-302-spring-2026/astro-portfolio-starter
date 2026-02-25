@@ -221,5 +221,29 @@ body:
       description: In the text area above, provide references to the rules that misuse these CSS properties.
       value: |
         ```CSS
-          <!-- Use code blocks to include examples -->
+          /* Use code blocks to include examples */
+        ```
+  - type: dropdown
+    attributes:
+      label: Does the designer use absolute units (i.e., pixels) instead of relative units?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true 
+  - type: dropdown
+    attributes:
+      label: Do any CSS rules appear repetitive or redundant? Could some be conslidated into one rule with mulitple uses?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true 
+  - type: textarea
+    attributes:
+      label: Examples of repetitive or redundant rules.
+      description: In the text area above, provide references to relevant CSS rules.
+      value: |
+        ```CSS
+          /* Use code blocks to include examples */
         ```
