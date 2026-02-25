@@ -140,7 +140,7 @@ body:
   - type: textarea
     attributes:
       label: Examples of superfluous <div> tags.
-      description: In the text area above, provide references to the site's files that create unnecessary, superfluous <div>s.
+      description: In the text area above, provide references to the site's files that create unnecessary, superfluous div elements.
       value: |
         ```HTML
           <!-- Use code blocks to include examples -->
