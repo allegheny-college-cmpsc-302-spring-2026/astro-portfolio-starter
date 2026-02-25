@@ -31,8 +31,8 @@ body:
       label: Examples of areas where the site designer uses design principles.
       description: In the text area above, provide explanations/examples of these principles in use.
       value: |
-      #### Design Principles
-      Use markdown heading 5 and 6 to describe how the designer used each principle checked above.
+        #### Design Principles
+        Use markdown heading 5 and 6 to describe how the designer used each principle checked above.
   - type: markdown
     attributes:
       value: |
