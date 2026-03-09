@@ -1,0 +1,8 @@
+---
+const {name, img} = Astro.props;
+---
+<div class ="thirds__grid_projects skill-card">
+    <h3>{name}</h3>
+    <img src = {img} alt = "placeholder" />
+    <slot />
+</div>

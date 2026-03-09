@@ -1,0 +1,111 @@
+  :root {
+    --bg: #0a0a15;
+    --text: #e0e0ff;
+    --accent: #00d4ff;
+    --gray: #b0b0d0;
+  }
+
+  .hero {
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #0f0f1a, var(--bg));
+  }
+
+  h1 { font-size: 4rem; margin: 0; color: white; }
+  h2 { font-size: 2.2rem; margin: 1rem 0; color: var(--accent); }
+  p { max-width: 700px; margin: 1rem auto; color: var(--gray); }
+
+  .btn {
+    padding: 1rem 2rem;
+    background: var(--accent);
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .section { padding: 5rem 1rem; text-align: center; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .skill-card {
+    background: #1e1e38;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    text-align: center;
+  }
+
+    body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #0a0a15;
+    color: #e0e0ff;
+    line-height: 1.6;
+  }
+
+  .main-nav {
+    background: #0a0a15;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #1e1e38;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .main-nav a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .main-nav a:hover {
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  footer {
+    background: #0a0a15;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #1e1e38;
+    color: #b0b0d0;
+  }
+
+  .thirds__grid_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 75vw;
+    grid-gap: 3rem;
+    margin: 0 auto;
+  }
+
+  .thirds__grid_projects {
+    text-align: left;
+  }
+
+  .thirds__grid_projects img {
+    width: 100%;
+  }
