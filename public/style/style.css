@@ -178,15 +178,6 @@ input:checked + .slider:before {
     background: var(--webco-white);
 }
 
-.auto-suggest {
-    list-style-type: none;
-    position: absolute;
-}
-
-.suggest-item {
-    color: var(--webco-printer-black);
-}
-
 .full__three_column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
