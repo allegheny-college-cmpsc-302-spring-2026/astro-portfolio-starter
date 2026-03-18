@@ -50,7 +50,7 @@ const SuggestionListComponent = ({search, items}) => {
             {
                 items.map((item, index) => (
                     <li className = "auto-suggest-item" key = {index}>
-                        {item}
+                        {item.toLowerCase()}
                     </li>
                 ))
             }
