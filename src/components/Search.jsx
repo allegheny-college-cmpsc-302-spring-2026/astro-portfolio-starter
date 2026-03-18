@@ -31,6 +31,31 @@ const SearchBarComponent = ({search, setSearch}) => {
 
 const SuggestionListComponent = ({search, items}) => {
 
+    if (search === "") {
+        return (
+            <div></div>
+        )
+    }
+
+    if(items.length === 0) {
+        return (
+            <ul className = "auto-suggest">
+                <li className = "auto-suggest-item">No results found</li>
+            </ul>
+        )
+    }
+
+    return (
+        <ul className = "auto-suggest">
+            {
+                items.map((item, index) => (
+                    <li className = "auto-suggest-item" key = {index}>
+                        {item}
+                    </li>
+                ))
+            }
+        </ul>
+    )
 }
 
 export default function Search () {
@@ -43,7 +68,7 @@ export default function Search () {
     return (
         <div>
             <SearchBarComponent search = {searchTerm} setSearch = {setSearchTerm} />
-            <SuggestionListComponent />
+            <SuggestionListComponent search = {searchTerm} items = {filtered}/>
         </div>
     )
 }

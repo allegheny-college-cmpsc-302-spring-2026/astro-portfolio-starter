@@ -94,6 +94,7 @@ article {
     overflow: hidden;
     text-wrap: balance;
     padding-right: 1rem;
+    transition: 2s;
 }
 
 article p {
@@ -176,6 +177,25 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(1rem);
     background: var(--webco-white);
+}
+
+.auto-suggest {
+    list-style-type: none;
+    position: absolute;
+    background-color: var(--webco-white);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border: var(--webco-color-gray) 1px solid;
+}
+
+.auto-suggest-item {
+    color: var(--webco-printer-black)
+}
+.auto-suggest-item:hover {
+    background-color: var(--webco-color-purple-bg);
+    color: var(--webco-white);
+    border-radius: 8px;
 }
 
 .full__three_column {
