@@ -1,56 +1,14 @@
 ---
-import Band from '../components/Band.astro';
-import Excerpt from '../components/Excerpt.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ProductImage from '../components/ProductImage.astro';
-import LazyArticles from '../components/LazyArticles.jsx';
-import { title } from 'node:process';
-const pageTitle = "Lorem Ipsum";
-const images = [
-	{src: "/img/picture_placeholder.png", alt: "Purple mountains"},
-	{src: "https://placecats.com/1500/1024", alt: "A cat staring at the viewer menacingly"},
-	{src: "https://placehold.co/1440x1024", alt: "A placeholder with dimensions 1440 x 1024"}
-];
-const excerptTitles = [
-	"Lorem Ipsum",
-	"Etiam Accumsan",
-	"Donec Gravida",
-	"Suspendisse Consectetur"
-]
 ---
-<BaseLayout pageTitle={pageTitle}>
-	<section aria-labelledby = "primary-heading">
-		<h1 class = "centered" id = "primary-heading">{pageTitle}</h1>
-		<div class = "full__three_column gap__3_rem">
-			{
-				images.map(img => (
-					<ProductImage src = {img.src} alt = {img.alt} />
-				))
-			}
-		</div>
-	</section>
-	<Band bandTitle = "Lorem Ipsum">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut libero eu 
-		justo mattis vulputate. Etiam accumsan sollicitudin turpis, a aliquam arcu. Donec 
-		vel mi eu mi varius tincidunt id nec urna. Duis urna massa, hendrerit nec neque vel, 
-		rutrum congue sem. Vivamus felis mi, ornare id dignissim ac, viverra sed quam. 
-		In nec consectetur nulla. Aliquam cursus blandit magna, vel condimentum purus mattis 
-		vitae. Sed nec tempus nibh, quis posuere massa. Etiam a placerat urna. Aliquam erat 
-		volutpat. Donec gravida tortor arcu, sed fringilla arcu laoreet sed. Suspendisse 
-		consectetur felis sem, ut interdum orci ornare non. Donec cursus massa non euismod 
-		luctus.
-	</Band>
-	<section aria-labelledby = "news-heading">
-		<h2 id = "news-heading" class = "centered">News Ipsum</h2>
-		<div class = "full__four_column container text__column">
-			{
-				excerptTitles.map(title => (
-					<Excerpt excerptTitle = {title}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel iaculis lacus, et fringilla ex. Quisque sed sapien metus. Suspendisse congue hendrerit dapibus. Mauris ut consectetur quam, vel auctor elit. Nulla gravida urna lacinia est dapibus faucibus. Vivamus nulla felis, consequat eget dolor id, bibendum interdum lacus. Sed sit amet ipsum et nibh porta imperdiet sit amet et nisi. Nam maximus libero vel sodales blandit. Quisque vitae sagittis elit. Fusce at scelerisque magna. Suspendisse bibendum nulla non scelerisque interdum. Nullam vel lacus congue, tristique velit pretium, auctor mauris. Fusce in sem sit amet eros feugiat bibendum a nec urna. Morbi.
-					</Excerpt>
-				))
-			}
-
-		</div>
-	</section>
-</BaseLayout>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
+</html>
