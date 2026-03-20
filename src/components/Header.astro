@@ -1,0 +1,11 @@
+---
+import Navigation from './Navigation.astro'
+import SearchBar from './Search.jsx'
+---
+<header>
+    <strong>WebCo</strong>
+    <SearchBar client:load />
+    <nav>
+        <Navigation />
+    </nav>
+</header>
