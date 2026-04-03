@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&family=Jost:wght@400;500;600;700&display=swap');
+
 /* ================================================================
    ROOT & CUSTOM PROPERTIES
    ================================================================ */
 :root {
-  /* Define your color palette, spacing, typography here */
+  --font-body: 'Jost', sans-serif;
+  --font-section: 'Cormorant Garamond', serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --coral: #FF644C;
+  --foam: #F1FAEE;
+  --background-shallows: #d1ece6;
+  --shallows: #A8DADC;
+  --open-ocean: #457B9D;
+  --deep-sea: #1D3557;
+
+  --page-gutter: 10rem;
+  --page-gap: 1rem;
 }
 
 /* ================================================================
@@ -19,36 +33,50 @@ html {
 }
 
 body {
-  /* Base typography and layout */
+  background-color: var(--foam);
+  color: var(--deep-sea);
 }
 
 /* ================================================================
    BASE ELEMENTS
    ================================================================ */
-h1,
-h2,
-h3 {
-  /* Heading styles */
-}
 
 h1 {
-  /* Primary headings */
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
 }
 
 h2 {
-  /* Section headings */
+  font-family: var(--font-section);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--deep-sea);
 }
 
 h3 {
-  /* Subheadings */
+  font-family: var(--font-section);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--open-ocean);
+  font-style: italic;
 }
 
 p {
-  /* Paragraph styles */
+  font-family: var(--font-body);
+  color: var(--deep-sea);
 }
 
 a {
-  /* Link styles */
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--deep-sea);
 }
 
 /* ================================================================
@@ -56,6 +84,7 @@ a {
    ================================================================ */
 header {
   /* Page header */
+  box-shadow: 0 0.35rem 0.85rem rgba(29, 53, 87, 0.18);
 }
 
 main {
@@ -64,6 +93,7 @@ main {
 
 footer {
   /* Page footer */
+  min-height: 20rem;
 }
 
 /* ================================================================
@@ -71,37 +101,58 @@ footer {
    ================================================================ */
 .header {
   /* Header wrapper */
+  margin: 0 var(--page-gutter);
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  flex: 1;
+  text-align: left;
+  justify-content: left;
 }
 
 .header h2 {
   /* Site title/logo */
+  flex: 1;
+  font-style: italic;
+  justify-content: right;
 }
 
 /* ================================================================
    NAVIGATION COMPONENT
    ================================================================ */
-nav {
+.nav {
   /* Navigation container */
-}
-
-nav#menu {
-  /* Primary navigation */
-}
-
-nav.nav {
-  /* Navigation styling */
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: left;
+  height: 5rem;
 }
 
 nav ul {
   /* Navigation list */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin: 0;
+  height: 100%;
+  list-style: none;
+  padding-left: 0;
 }
 
 nav li {
   /* Navigation items */
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 nav a {
   /* Navigation links */
+  text-decoration: none;
 }
 
 nav a:hover,
@@ -112,24 +163,26 @@ nav a:focus {
 /* ================================================================
    HERO SECTION
    ================================================================ */
-section#home {
-  /* Hero section container */
-}
 
-section#home.hero {
-  /* Hero with class */
-}
-
-.hero .page-box {
+.hero {
   /* Hero content wrapper */
+  display: block;
 }
 
 .hero-info {
   /* Hero text content */
+  grid-column: 1 / span 5;
 }
 
 .hero-text {
   /* Hero text block */
+  align-items: center;
+}
+
+.hero-text h2,
+.hero-text h3 {
+  /* Hero text block headings */
+  font-size: 6rem;
 }
 
 .hero-info-links {
@@ -138,6 +191,8 @@ section#home.hero {
 
 .hero-image {
   /* Hero image area */
+  grid-column: 7 / span 4;
+  justify-self: end;
 }
 
 /* ================================================================
@@ -151,20 +206,31 @@ section#about.about {
   /* About with class */
 }
 
-.about-box {
-  /* About content wrapper */
+section#about .page-box {
+  align-items: start;
+}
+
+section#about > .page-box > h1 {
+  grid-column: 1 / -1;
 }
 
 .artist-statement {
   /* Artist statement article */
+  grid-column: 1 / -1;
 }
 
 .education {
   /* Education article */
+  grid-column: 1 / span 5;
+}
+
+.about-box {
+  /* About content wrapper */
 }
 
 .experience {
   /* Experience article */
+  grid-column: 7 / span 4;
 }
 
 /* ================================================================
@@ -176,6 +242,34 @@ section#writing {
 
 section#writing.poetry {
   /* Poetry with class */
+  background-color: var(--background-shallows);
+}
+
+section#writing .page-box {
+  align-items: start;
+}
+
+section#writing > .page-box > .page-info {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  column-gap: var(--page-gap);
+  row-gap: 2rem;
+  width: 100%;
+}
+
+section#writing > .page-box > .page-info > h1 {
+  grid-column: 1 / -1;
+}
+
+.publications {
+  /* Publications article */
+  grid-column: 1 / span 5;
+}
+
+.selecteds {
+  /* Selected works article */
+  grid-column: 7 / span 4;
 }
 
 .poetry .page-box {
@@ -184,14 +278,6 @@ section#writing.poetry {
 
 .page-info {
   /* Page info container */
-}
-
-.publications {
-  /* Publications article */
-}
-
-.selecteds {
-  /* Selected works article */
 }
 
 /* ================================================================
@@ -205,12 +291,21 @@ section#design.design {
   /* Design with class */
 }
 
+section#design .page-box {
+  align-items: start;
+}
+
+section#design > .page-box > h1 {
+  grid-column: 1 / -1;
+}
+
 .design .page-box {
   /* Design content wrapper */
 }
 
 .design-grid {
   /* Design grid article */
+  grid-column: 1 / -1;
 }
 
 /* ================================================================
@@ -218,6 +313,7 @@ section#design.design {
    ================================================================ */
 footer {
   /* Footer landmark */
+  background-color: var(--background-shallows);
 }
 
 #contact {
@@ -226,14 +322,22 @@ footer {
 
 .footer {
   /* Footer wrapper */
+  margin: 2.5rem var(--page-gutter);
 }
 
 .footer-box {
   /* Footer content container */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: var(--page-gap);
+  row-gap: 2rem;
+  align-items: start;
 }
 
 .footer-info {
   /* Footer text info */
+  margin-top: 5rem
 }
 
 .footer-info h2 {
@@ -246,6 +350,7 @@ footer {
 
 .footer-links {
   /* Footer links container */
+  display: contents;
 }
 
 .footer-navigation {
@@ -261,6 +366,13 @@ footer {
    ================================================================ */
 .page-box {
   /* General page content wrapper */
+  height: 100vh;
+  width: 100%;
+  padding: var(--page-gutter);
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  column-gap: var(--page-gap);
+  row-gap: 2rem;
 }
 
 /* ================================================================
@@ -268,10 +380,69 @@ footer {
    ================================================================ */
 @media (max-width: 768px) {
   /* Tablet and smaller */
+
+  .header,
+  .footer {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .page-box {
+    height: auto;
+    padding: 2rem;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .hero-info,
+  .hero-image,
+  .artist-statement,
+  .education,
+  .experience,
+  section#writing > .page-box > .page-info,
+  .design-grid,
+  section#about > .page-box > h1,
+  section#writing > .page-box > .page-info > h1,
+  section#design > .page-box > h1 {
+    grid-column: 1 / -1;
+  }
+
+  section#writing > .page-box > .page-info {
+    grid-template-columns: 1fr;
+  }
+
+  .publications,
+  .selecteds {
+    grid-column: 1 / -1;
+  }
+
+  .hero-image {
+    justify-self: start;
+  }
+
+  .footer-box {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-info,
+  .footer-navigation,
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 480px) {
   /* Mobile devices */
+
+  .header,
+  .footer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .page-box {
+    padding: 1rem;
+  }
 }
 
 
